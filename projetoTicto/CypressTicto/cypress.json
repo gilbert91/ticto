@@ -1,0 +1,25 @@
+{
+    "url": "https://qa-test.ticto.io/",
+    "reporter": "cypress-multi-reporters",
+    "defaultCommandTimeout": 60000,
+    "reporterOptions": {
+      "reporterEnabled": "mochawesome",
+      "mochawesomeReporterOptions": {
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      }
+    },
+    "db": {
+      "userName": "",
+      "password": "",
+      "server": "",
+      "options": {
+        "database": "",
+        "encrypt": true,
+        "rowCollectionOnRequestCompletion": true
+      }
+    }
+  }
