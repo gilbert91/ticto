@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-28T16:34:44.555Z",
+    "end": "2022-09-28T16:35:13.984Z",
+    "duration": 29429,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "93e8c856-dd9d-4439-bd21-a4f3fb5fd615",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2c6dd7a9-5d27-4d52-b5f9-f34183890d4e",
+          "title": "Teste Ticto",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "9d6927bd-5390-40e1-bd0b-55fac61f77e6",
+              "title": "principal",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Carregar pagina com sucesso",
+                  "fullTitle": "Teste Ticto principal Carregar pagina com sucesso",
+                  "timedOut": null,
+                  "duration": 4326,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Arrange\nvar cadastrar = 'Cadastrar'; //Act\n//Assert\n_cadastro.default.validarCadastroCliente(cadastrar);",
+                  "err": {},
+                  "uuid": "a8956ec5-eee5-450d-bf99-a2fcf17f4acc",
+                  "parentUUID": "9d6927bd-5390-40e1-bd0b-55fac61f77e6",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Cadastro sem Sucesso",
+                  "fullTitle": "Teste Ticto principal Cadastro sem Sucesso",
+                  "timedOut": null,
+                  "duration": 3480,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Arrange\nvar mensagemNomeInvalido = 'O campo Nome é obrigatório.';\nvar mensagemEmailInvalido = 'O campo Email é obrigatório.';\nvar mensagemPasswordInvalido = 'O campo Password é obrigatório.'; //Act\n_cadastro.default.clicarBotaoCadastrar(); //Assert\n\n_cadastro.default.validarMensagemNomeInvalido(mensagemNomeInvalido);\n_cadastro.default.validarMensagemEmailInvalido(mensagemEmailInvalido);\n_cadastro.default.validarMensagemPasswordInvalido(mensagemPasswordInvalido);",
+                  "err": {},
+                  "uuid": "bca908ee-026b-4e2d-bb74-d75946fcedd3",
+                  "parentUUID": "9d6927bd-5390-40e1-bd0b-55fac61f77e6",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Cadastro com Sucesso",
+                  "fullTitle": "Teste Ticto principal Cadastro com Sucesso",
+                  "timedOut": null,
+                  "duration": 4498,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Arrange\nvar nome = fakerbr.name.findName();\nvar email = fakerbr.internet.email(nome);\nvar password = fakerbr.internet.password();\nvar mensagemSucesso = 'Usuário cadastrado com sucesso.'; //Act\n_cadastro.default.preecherCampoNome(nome);\n_cadastro.default.preencherCampoEmail(email);\n_cadastro.default.preencherCampoPassword(password);\n_cadastro.default.clicarBotaoCadastrar(); //Assert\n\n_cadastro.default.validarMensagemCadastro(mensagemSucesso);",
+                  "err": {},
+                  "uuid": "ee70c3ed-fcee-4a1c-8345-1e3e8c22b937",
+                  "parentUUID": "9d6927bd-5390-40e1-bd0b-55fac61f77e6",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Verificação nome e e-mail",
+                  "fullTitle": "Teste Ticto principal Verificação nome e e-mail",
+                  "timedOut": null,
+                  "duration": 3768,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Arrange\nvar nome = fakerbr.name.findName();\nvar email = fakerbr.internet.email(nome);\nvar password = fakerbr.internet.password(); //Act\n_cadastro.default.preecherCampoNome(nome);\n_cadastro.default.preencherCampoEmail(email);\n_cadastro.default.preencherCampoPassword(password);\n_cadastro.default.clicarBotaoCadastrar();\ncy.scrollTo('0', '100%'); //scroll para baixo\n//Assert\n_cadastro.default.validarNomeCadastro(nome);\n_cadastro.default.validarEmailCadastro(email);",
+                  "err": {},
+                  "uuid": "0845b689-5893-43f3-8a04-d26da9426b77",
+                  "parentUUID": "9d6927bd-5390-40e1-bd0b-55fac61f77e6",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Verificação edição nome e e-mail",
+                  "fullTitle": "Teste Ticto principal Verificação edição nome e e-mail",
+                  "timedOut": null,
+                  "duration": 4323,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Arrange\nvar nome = fakerbr.name.findName();\nvar email = fakerbr.internet.email(nome); //Act\ncy.scrollTo('0', '100%'); //scroll para baixo\n_cadastro.default.clicarBotaoAções();\n_cadastro.default.clicarBotaoEditar();\n_cadastro.default.limparCampoNomeEditar();\n_cadastro.default.preencherCampoNomeEditar(nome);\n_cadastro.default.limparCampoEmailEditar();\n_cadastro.default.preencherCampoEmailEditar(email);\n_cadastro.default.clicarBotaoSalvarEdicao(); // 5. Verifique se nome e e-mail foram alterados corretamente no GRID; \n//Assert\n\n_cadastro.default.validarNomeCadastro(nome);\n_cadastro.default.validarEmailCadastro(email);",
+                  "err": {},
+                  "uuid": "3392c3e1-2b3b-42ab-ac35-a5c0ca514b6f",
+                  "parentUUID": "9d6927bd-5390-40e1-bd0b-55fac61f77e6",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Apagar Cadastro",
+                  "fullTitle": "Teste Ticto principal Apagar Cadastro",
+                  "timedOut": null,
+                  "duration": 2819,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Arrange\nvar mensagemExclusao = 'Usuário removido com sucesso.'; //Act\ncy.scrollTo('0', '100%'); //scroll para baixo\n_cadastro.default.clicarBotaoAções();\n_cadastro.default.clicarBotaoExclusao();\n_cadastro.default.clicarBotaoConfirmarExclusao(); // 7. Verifique se o cadastro foi apagado. \n//Assert\n\n_cadastro.default.validarMensagemExclusaoCadastro(mensagemExclusao);",
+                  "err": {},
+                  "uuid": "be35c6ad-e569-4bda-ad4a-65174b59a963",
+                  "parentUUID": "9d6927bd-5390-40e1-bd0b-55fac61f77e6",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "a8956ec5-eee5-450d-bf99-a2fcf17f4acc",
+                "bca908ee-026b-4e2d-bb74-d75946fcedd3",
+                "ee70c3ed-fcee-4a1c-8345-1e3e8c22b937",
+                "0845b689-5893-43f3-8a04-d26da9426b77",
+                "3392c3e1-2b3b-42ab-ac35-a5c0ca514b6f",
+                "be35c6ad-e569-4bda-ad4a-65174b59a963"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 23214,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
